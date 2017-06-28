@@ -1,5 +1,4 @@
 import React from "react";
-import uuid from 'uuid';
 import WorkerCard from './WorkerCard';
 import data from './data';
 import "./workerCards.css";
