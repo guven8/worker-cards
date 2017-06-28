@@ -120,6 +120,8 @@
   font-size: 24px;
   font-weight: bold;
   margin-left: 10px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .worker-info .stars-container {
@@ -201,7 +203,24 @@
 }
 
 @media screen and (max-width: 768px) {
-  .worker-card {
-    
+  .worker-card .profile-pic {
+    width: 90px;
+    height: 90px;
+    left: -5px;
+    top: -5px;
+  }
+
+  .worker-info .name {
+    margin: 0;
+  }
+
+  .worker-info .favourite-button {
+    position: absolute;
+    right: 30px;
+    top: 100px;
+  }
+
+  .shift-info .shift.last {
+    display: none;
   }
 }

@@ -45,15 +45,15 @@ export default ({ worker }) => {
           </div>
         </div>
         <div className="shift-info">
-          <div className="shift">
-            <span className="last-shift">Last shift</span>
-            <span className="last-shift-time">{moment.unix(worker.lastShift).format('Do MMM YYYY')}</span>
-            <span className="last-shift-time">8:30 to 17:30</span>
+          <div className="shift last">
+            <span>Last shift</span>
+            <span>{moment.unix(worker.lastShift).format('Do MMM YYYY')}</span>
+            <span>8:30 to 17:30</span>
           </div>
-          <div className="shift">
-            <span className="last-shift">Last shift</span>
-            <span className="last-shift-time">{moment.unix(worker.nextShift).format('Do MMM YYYY')}</span>
-            <span className="last-shift-time">8:30 to 17:30</span>
+          <div className="shift next">
+            <span>Last shift</span>
+            <span>{moment.unix(worker.nextShift).format('Do MMM YYYY')}</span>
+            <span>8:30 to 17:30</span>
           </div>
         </div>
         <input type="text" placeholder="Place holder text" />
