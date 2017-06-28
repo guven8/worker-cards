@@ -12,7 +12,12 @@ export default ({ worker }) => {
     Missing: worker.status === 'missing',
     'Checked into work': worker.status === 'checked-in',
     'Working later today': worker.status === 'working',
-  })
+  });
+
+  const nextShiftClass = classNames({
+    'shift next': true,
+    red: worker.status === 'missing'
+  });
 
   let stars = [];
   for (let i = 0; i < 5; i++) {
@@ -50,7 +55,7 @@ export default ({ worker }) => {
             <span>{moment.unix(worker.lastShift).format('Do MMM YYYY')}</span>
             <span>8:30 to 17:30</span>
           </div>
-          <div className="shift next">
+          <div className={nextShiftClass}>
             <span>Last shift</span>
             <span>{moment.unix(worker.nextShift).format('Do MMM YYYY')}</span>
             <span>8:30 to 17:30</span>
@@ -58,20 +63,20 @@ export default ({ worker }) => {
         </div>
         <input type="text" placeholder="Place holder text" />
         <div className="contact-locate-remove">
-          <div className="action">
-            <span className="logo contact" />
-            <span className="contact-label">contact</span>
+          <div className="action contact">
+            <span className="logo" />
+            <span className="label">contact</span>
           </div>
           {worker.status === 'checked-in' ?
-            <div className="action">
-              <span className="logo locate" />
-              <span className="locate-label">Locate</span>
+            <div className="action locate">
+              <span className="logo" />
+              <span className="label">Locate</span>
             </div>
             : null
           }
-          <div className="action">
-            <span className="logo remove"></span>
-            <span className="remove-label">Remove</span>
+          <div className="action remove">
+            <span className="logo"></span>
+            <span className={`remove-label ${worker.status}`}>Remove</span>
           </div>
         </div>
       </div>
