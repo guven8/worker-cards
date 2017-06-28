@@ -1,0 +1,40 @@
+.worker-cards-container {
+  width: 100%;
+  max-width: 1280px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+.worker-cards-container .worker-card {
+  width: 100%;
+  max-width: 350px;
+  height: 200px;
+  border: 1px solid;
+  border-radius: 15px;
+  border-bottom-left-radius: 45px;
+  margin: 20px;
+  position: relative;
+}
+
+.worker-card .profile-pic {
+  border-radius: 50%;
+  width: 100px;
+  height: auto;
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  z-index: 1;
+}
+
+.worker-card .status {
+  position: absolute;
+  width: 90px;
+  height: 100%;
+  border: 1px solid;
+  border-radius: 45px;
+}
