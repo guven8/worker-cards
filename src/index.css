@@ -11,6 +11,14 @@ body {
   font-family: 'Asap', sans-serif;
 }
 
-.hide {
-  /*visibility: hidden;*/
+@media screen and (max-width: 768px) {
+  body {
+    padding: 30px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    padding: 10px;
+  }
 }

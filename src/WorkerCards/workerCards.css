@@ -5,7 +5,6 @@
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-  border-radius: 5px;
 }
 
 .worker-cards-container .worker-card {
@@ -220,6 +219,15 @@
     top: -5px;
   }
 
+  .worker-card .status {
+    padding-top: 90px;
+  }
+
+  .worker-card .status .status-icon {
+    width: 30px;
+    height: 30px; 
+  }
+
   .worker-info .name {
     width: 80%;
     margin: 0;
@@ -249,8 +257,22 @@
 }
 
 @media screen and (max-width: 500px) {
+  .worker-cards-container .worker-card {
+    margin: 10px 0;
+  }
+
+  .worker-card .profile-pic {
+    width: 70px;
+    height: 70px;
+  }
+
+  .worker-card .status {
+    width: 70px;
+    padding-top: 50px;
+  }
+
   .worker-card .worker-info {
-    padding: 10px 10px 0 95px;
+    padding: 10px 10px 0 75px;
   }
 
   .worker-info .favourite-button {
@@ -266,5 +288,10 @@
   .worker-info .name-ratings {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .worker-card .logo {
+    width: 30px;
+    height: 30px;
   }
 }

@@ -56,7 +56,7 @@ export default ({ worker }) => {
             <span>8:30 to 17:30</span>
           </div>
           <div className={nextShiftClass}>
-            <span>Last shift</span>
+            <span>Next shift</span>
             <span>{moment.unix(worker.nextShift).format('Do MMM YYYY')}</span>
             <span>8:30 to 17:30</span>
           </div>
